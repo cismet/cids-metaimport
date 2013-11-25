@@ -1,0 +1,7 @@
+<SQLRun>
+  <Connection>target.con</Connection>
+  <Statements>
+    <string>update cs_attr set foreign_key_references_to = -foreign_key_references_to where foreign_key_references_to_1n IS TRUE</string>
+    <string>ALTER TABLE cs_attr DROP COLUMN foreign_key_references_to_1n</string>
+  </Statements>
+</SQLRun>

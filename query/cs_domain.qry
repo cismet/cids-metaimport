@@ -1,0 +1,9 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+ cs_domain.name AS cs_domain_name 
+FROM cs_domain 
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

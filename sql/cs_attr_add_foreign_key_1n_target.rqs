@@ -1,0 +1,6 @@
+<SQLRun>
+  <Connection>target.con</Connection>
+  <Statements>
+    <string>ALTER TABLE cs_attr ADD COLUMN foreign_key_references_to_1n boolean</string>
+  </Statements>
+</SQLRun>

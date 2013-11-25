@@ -1,0 +1,66 @@
+<JPressoRun>
+  <SourceQuery>cs_ug_cat_node_perm.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_cat_node" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="node_type" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_node_type</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="is_root" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_is_root</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_ug_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_domain_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_permission" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_permission" targetField="key" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_permission_key</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug_cat_node_perm" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_ug_cat_node_perm" referencingField="cat_node_id" referencedTable="cs_cat_node" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_ug_cat_node_perm" referencingField="ug_id" referencedTable="cs_ug" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_ug_cat_node_perm" referencingField="domain" referencedTable="cs_domain" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_ug_cat_node_perm" referencingField="permission" referencedTable="cs_permission" referencedField="id" comparing="true" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_cat_node</string>
+      <string>cs_domain</string>
+      <string>cs_permission</string>
+      <string>cs_ug</string>
+      <string>cs_ug_cat_node_perm</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_permission" value="lookup(&quot;cs_permission&quot;,&quot;key&quot;) != null"/>
+      <property name="cs_ug" value="lookup(&quot;cs_ug&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_domain" value="lookup(&quot;cs_domain&quot;,&quot;name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

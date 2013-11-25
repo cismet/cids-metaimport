@@ -1,0 +1,80 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+cs_type.name AS cs_type_name, 
+cs_type.complex_type AS cs_type_complex_type, 
+cs_type.descr AS cs_type_descr, 
+
+cs_class.name AS cs_class_name, 
+cs_class.descr AS cs_class_descr, 
+cs_class.table_name AS cs_class_table_name, 
+cs_class.primary_key_field AS cs_class_primary_key_field, 
+cs_class.indexed AS cs_class_indexed, 
+cs_class.array_link AS cs_class_array_link, 
+
+cs_class_icon.name AS cs_class_icon_name, 
+cs_class_icon.file_name AS cs_class_icon_file_name, 
+
+cs_object_icon.name AS cs_object_icon_name, 
+cs_object_icon.file_name AS cs_object_icon_file_name, 
+
+cs_policy.name AS cs_policy_name, 
+
+cs_attribute_policy.name AS cs_attribute_policy_name, 
+
+cs_attr.name AS cs_attr_name, 
+cs_attr.field_name AS cs_attr_field_name, 
+cs_attr.foreign_key AS cs_attr_foreign_key, 
+cs_attr.substitute AS cs_attr_substitute, 
+cs_attr.descr AS cs_attr_descr, 
+cs_attr.visible AS cs_attr_visible, 
+cs_attr.indexed AS cs_attr_indexed, 
+cs_attr.isarray AS cs_attr_isarray, 
+cs_attr.array_key AS cs_attr_array_key, 
+cs_attr.optional AS cs_attr_optional, 
+cs_attr.default_value AS cs_attr_default_value, 
+cs_attr.pos AS cs_attr_pos, 
+cs_attr.precision AS cs_attr_precision, 
+cs_attr.scale AS cs_attr_scale, 
+cs_attr.extension_attr AS cs_attr_extension_attr, 
+cs_attr.foreign_key_references_to_1n AS cs_attr_foreign_key_references_to_1n, 
+
+cs_attr_foreign_class_icon.name AS cs_attr_foreign_class_icon_name, 
+cs_attr_foreign_class_icon.file_name AS cs_attr_foreign_class_icon_file_name, 
+
+cs_attr_foreign_object_icon.name AS cs_attr_foreign_object_icon_name, 
+cs_attr_foreign_object_icon.file_name AS cs_attr_foreign_object_icon_file_name, 
+
+cs_attr_foreign_policy.name AS cs_attr_foreign_policy_name, 
+
+cs_attr_foreign_attribute_policy.name AS cs_attr_foreign_attribute_policy_name, 
+
+cs_attr_type.name AS cs_attr_type_name, 
+cs_attr_type.complex_type AS cs_attr_type_complex_type, 
+cs_attr_type.descr AS cs_attr_type_descr, 
+
+cs_attr_class_foreign.name AS cs_attr_class_foreign_name, 
+cs_attr_class_foreign.table_name AS cs_attr_class_foreign_table_name, 
+cs_attr_class_foreign.descr AS cs_attr_class_foreign_descr, 
+cs_attr_class_foreign.primary_key_field AS cs_attr_class_foreign_primary_key_field, 
+cs_attr_class_foreign.indexed AS cs_attr_class_foreign_indexed, 
+cs_attr_class_foreign.array_link AS cs_attr_class_foreign_array_link 
+
+FROM cs_type 
+LEFT JOIN cs_class ON cs_class.id = cs_type.class_id 
+LEFT JOIN cs_icon AS cs_class_icon ON cs_class_icon.id = cs_class.class_icon_id 
+LEFT JOIN cs_icon AS cs_object_icon ON cs_object_icon.id = cs_class.object_icon_id 
+LEFT JOIN cs_policy AS cs_policy ON cs_policy.id = cs_class.policy 
+LEFT JOIN cs_policy AS cs_attribute_policy ON cs_attribute_policy.id = cs_class.attribute_policy 
+LEFT JOIN cs_attr ON cs_attr.class_id = cs_class.id 
+LEFT JOIN cs_type AS cs_attr_type ON cs_attr_type.id = cs_attr.type_id 
+LEFT JOIN cs_class AS cs_attr_class_foreign ON cs_attr_class_foreign.id = cs_attr.foreign_key_references_to_abs 
+LEFT JOIN cs_icon AS cs_attr_foreign_class_icon ON cs_attr_foreign_class_icon.id = cs_attr_class_foreign.class_icon_id 
+LEFT JOIN cs_icon AS cs_attr_foreign_object_icon ON cs_attr_foreign_object_icon.id = cs_attr_class_foreign.object_icon_id 
+LEFT JOIN cs_policy AS cs_attr_foreign_policy ON cs_attr_foreign_policy.id = cs_attr_class_foreign.policy 
+LEFT JOIN cs_policy AS cs_attr_foreign_attribute_policy ON cs_attr_foreign_attribute_policy.id = cs_attr_class_foreign.attribute_policy 
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

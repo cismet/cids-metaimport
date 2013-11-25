@@ -1,0 +1,52 @@
+<JPressoRun>
+  <SourceQuery>cs_ug_membership.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_domain" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_domain_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_ug_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="login_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_usr_login_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug_membership" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_ug_membership" referencingField="ug_domain" referencedTable="cs_domain" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_ug_membership" referencingField="ug_id" referencedTable="cs_ug" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_ug_membership" referencingField="usr_id" referencedTable="cs_usr" referencedField="id" comparing="true" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_domain</string>
+      <string>cs_ug</string>
+      <string>cs_ug_membership</string>
+      <string>cs_usr</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_usr" value="lookup(&quot;cs_usr&quot;,&quot;login_name&quot;) != null"/>
+      <property name="cs_ug" value="lookup(&quot;cs_ug&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_domain" value="lookup(&quot;cs_domain&quot;,&quot;name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

@@ -1,0 +1,22 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+cs_cat_node.name AS cs_cat_node_name, 
+cs_cat_node.descr AS cs_cat_node_descr, 
+cs_cat_node.node_type AS cs_cat_node_node_type, 
+cs_cat_node.is_root AS cs_cat_node_is_root, 
+cs_cat_node.org AS cs_cat_node_org, 
+cs_cat_node.dynamic_children AS cs_cat_node_dynamic_children, 
+cs_cat_node.sql_sort AS cs_cat_node_sql_sort, 
+cs_cat_node.derive_permissions_from_class AS cs_cat_node_derive_permissions_from_class, 
+cs_cat_node.icon AS cs_cat_node_icon, 
+cs_class.table_name AS cs_class_table_name, 
+cs_policy.name AS cs_policy_name 
+FROM cs_cat_node 
+LEFT JOIN cs_class ON cs_class.id = cs_cat_node.class_id 
+LEFT JOIN cs_policy ON cs_policy.id = cs_cat_node.policy 
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

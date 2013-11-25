@@ -1,0 +1,15 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+cs_ug.name AS cs_ug_name, 
+cs_ug.descr AS cs_ug_descr, 
+cs_ug.prio AS cs_ug_prio, 
+cs_domain.name AS cs_domain_name 
+FROM cs_ug
+LEFT JOIN cs_domain ON cs_domain.id = cs_ug.domain 
+
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

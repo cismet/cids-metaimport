@@ -1,0 +1,44 @@
+<JPressoRun>
+  <SourceQuery>cs_ug.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_domain" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_domain_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_ug_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_ug_descr</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="prio" autoIncrement="false" comparing="false" enclosingChar="">
+      <Content>cs_ug_prio</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_ug" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_ug" referencingField="domain" referencedTable="cs_domain" referencedField="id" comparing="false" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_domain</string>
+      <string>cs_ug</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_ug" value="lookup(&quot;cs_ug&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_domain" value="lookup(&quot;cs_domain&quot;,&quot;name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

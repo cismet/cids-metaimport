@@ -1,0 +1,16 @@
+<ProjectOptions>
+  <AdditionalClassPath/>
+  <Driver>
+    <DriverDescription name="postgres" defaultclass="org.postgresql.Driver" urlformat="jdbc:postgresql://&lt;HOST&gt;:&lt;PORT&gt;/&lt;DB&gt;">
+      <DriverJars>
+        <DriverJar file="/usr/share/java/postgresql.jar">
+          <DriverClasses>
+            <string>org.postgresql.Driver</string>
+          </DriverClasses>
+        </DriverJar>
+      </DriverJars>
+    </DriverDescription>
+  </Driver>
+  <DefaultFinalizerClass></DefaultFinalizerClass>
+  <DefaultFinalizerProperties/>
+</ProjectOptions>

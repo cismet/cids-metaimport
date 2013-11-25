@@ -1,0 +1,14 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT
+cs_domain.name AS cs_domain_name, 
+cs_ug.name AS cs_ug_name, 
+cs_usr.login_name AS cs_usr_login_name 
+FROM cs_ug_membership 
+LEFT JOIN cs_ug ON cs_ug.id = cs_ug_membership.ug_id 
+LEFT JOIN cs_domain ON cs_domain.id = cs_ug.domain 
+LEFT JOIN cs_usr ON cs_usr.id = cs_ug_membership.usr_id 
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

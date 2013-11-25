@@ -1,0 +1,8 @@
+<SQLRun>
+  <Connection>source.con</Connection>
+  <Statements>
+    <string>ALTER TABLE cs_attr ADD COLUMN foreign_key_references_to_1n boolean</string>
+    <string>ALTER TABLE cs_attr ADD COLUMN foreign_key_references_to_abs integer</string>
+    <string>update cs_attr set foreign_key_references_to_abs = abs(foreign_key_references_to), foreign_key_references_to_1n = foreign_key_references_to &lt; 0</string>
+  </Statements>
+</SQLRun>

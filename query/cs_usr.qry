@@ -1,0 +1,12 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT
+cs_usr.login_name AS cs_usr_login_name, 
+cs_usr.password AS cs_usr_password, 
+cs_usr.last_pwd_change AS cs_usr_last_pwd_change, 
+cs_usr.administrator AS cs_usr_administrator 
+FROM cs_usr
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

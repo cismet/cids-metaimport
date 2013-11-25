@@ -1,0 +1,229 @@
+<JPressoRun>
+  <SourceQuery>cs_type_class_attr.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="1" targetTable="cs_type" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_type" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_type_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_type" targetField="complex_type" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_type_complex_type</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_type" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_type_descr</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_descr</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="table_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_class_table_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="primary_key_field" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_primary_key_field</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="indexed" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_indexed</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_class" targetField="array_link" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_array_link</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_icon" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_icon" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_class_icon_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_icon" targetField="file_name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_class_icon_file_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_icon" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_icon" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_object_icon_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_icon" targetField="file_name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_object_icon_file_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_policy" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_policy" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_policy_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_policy" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_policy" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attribute_policy_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="field_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_field_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="foreign_key" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_key</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="substitute" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_substitute</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_descr</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="visible" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_visible</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="indexed" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_indexed</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="isarray" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_isarray</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="array_key" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_array_key</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="optional" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_optional</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="default_value" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_default_value</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="pos" autoIncrement="false" comparing="false" enclosingChar="">
+      <Content>cs_attr_pos</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="precision" autoIncrement="false" comparing="false" enclosingChar="">
+      <Content>cs_attr_precision</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="scale" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_scale</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="extension_attr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_extension_attr</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_descr</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="table_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_table_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="primary_key_field" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_primary_key_field</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="indexed" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_indexed</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_class" targetField="array_link" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_class_foreign_array_link</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_type" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_type" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_type_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_type" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_type_descr</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_type" targetField="complex_type" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_type_complex_type</Content>
+    </Mapping>
+    <Mapping path="3" targetTable="cs_policy" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="4" targetTable="cs_policy" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="3" targetTable="cs_policy" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_policy_name</Content>
+    </Mapping>
+    <Mapping path="4" targetTable="cs_policy" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_attribute_policy_name</Content>
+    </Mapping>
+    <Mapping path="4" targetTable="cs_icon" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="3" targetTable="cs_icon" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="3" targetTable="cs_icon" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_class_icon_name</Content>
+    </Mapping>
+    <Mapping path="4" targetTable="cs_icon" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_object_icon_name</Content>
+    </Mapping>
+    <Mapping path="4" targetTable="cs_icon" targetField="file_name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_object_icon_file_name</Content>
+    </Mapping>
+    <Mapping path="3" targetTable="cs_icon" targetField="file_name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_class_icon_file_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_attr" targetField="foreign_key_references_to_1n" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_attr_foreign_key_references_to_1n</Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_type[1]" referencingField="class_id" referencedTable="cs_class[1]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[1]" referencingField="class_icon_id" referencedTable="cs_icon[1]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[1]" referencingField="object_icon_id" referencedTable="cs_icon[2]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[1]" referencingField="policy" referencedTable="cs_policy[1]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[1]" referencingField="attribute_policy" referencedTable="cs_policy[2]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_attr" referencingField="class_id" referencedTable="cs_class[1]" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_attr" referencingField="foreign_key_references_to" referencedTable="cs_class[2]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_attr" referencingField="type_id" referencedTable="cs_type[2]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_type[2]" referencingField="class_id" referencedTable="cs_class[2]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[2]" referencingField="attribute_policy" referencedTable="cs_policy[4]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[2]" referencingField="policy" referencedTable="cs_policy[3]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[2]" referencingField="object_icon_id" referencedTable="cs_icon[4]" referencedField="id" comparing="false" enclosingChar=""/>
+    <Reference referencingTable="cs_class[2]" referencingField="class_icon_id" referencedTable="cs_icon[3]" referencedField="id" comparing="false" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_attr</string>
+      <string>cs_class</string>
+      <string>cs_icon</string>
+      <string>cs_policy</string>
+      <string>cs_type</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_icon[4]" value="lookup(&quot;cs_icon[4]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_icon[1]" value="lookup(&quot;cs_icon[1]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_policy[4]" value="lookup(&quot;cs_policy[4]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_policy[1]" value="lookup(&quot;cs_policy[1]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_attr" value="lookup(&quot;cs_attr&quot;,&quot;field_name&quot;) != null"/>
+      <property name="cs_icon[3]" value="lookup(&quot;cs_icon[3]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_class[2]" value="lookup(&quot;cs_class[2]&quot;,&quot;table_name&quot;) != null"/>
+      <property name="cs_type[2]" value="lookup(&quot;cs_type[2]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_policy[3]" value="lookup(&quot;cs_policy[3]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_icon[2]" value="lookup(&quot;cs_icon[2]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_class[1]" value="lookup(&quot;cs_class[1]&quot;,&quot;table_name&quot;) != null"/>
+      <property name="cs_type[1]" value="lookup(&quot;cs_type[1]&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_policy[2]" value="lookup(&quot;cs_policy[2]&quot;,&quot;name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

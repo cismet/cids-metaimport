@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!-- JPresso build.xml -->
+<project name="JPresso" default="runProject" basedir=".">
+    
+    <property file="${user.home}/.jp_config"/>
+    <property name="condition" value="true"/>
+
+    <target name="runSingle">
+        <java classname="de.cismet.jpresso.core.starter.StartSingle"
+		maxmemory="${memory.max}" 
+		fork="yes" 
+		taskname="Run single ${run.sourcefile}">
+            <arg value="${basedir}"/>
+            <arg value="${run.sourcefile}"/>
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="runProject">
+        <java classname="de.cismet.jpresso.core.starter.StartProject"
+		maxmemory="${memory.max}" 
+		fork="yes" 
+		taskname="Run project ${basedir}">
+            <arg value="${basedir}"/>
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="runConvert">
+        <java classname="de.cismet.jpresso.core.starter.StartConvert"
+		maxmemory="${memory.max}" 
+		fork="yes" 
+		taskname="Convert ${convert.sourcefile}">
+            <arg value="${convert.sourcefile}"/>
+            <arg value="${convert.destdir}"/>
+			<arg value="${merge.properties}"/>
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="runExport">
+        <java classname="de.cismet.jpresso.core.starter.StartExport"
+		maxmemory="${memory.max}" 
+		fork="yes" 
+		taskname="Export ${export.sourcedir}">
+            <arg value="${export.sourcedir}"/>
+            <arg value="${export.destfile}"/>
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="runCompile">
+        <depend destdir="." srcdir="." >
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <pathelement path="${add.classpath}"/>
+            </classpath>
+        </depend>
+        <javac srcdir="." listfiles="true" fork="true" debug="true" includes="${compile.filelist}">
+            <classpath>
+                <pathelement location="${jpcore.jar}"/>
+                <pathelement path="${add.classpath}"/>
+            </classpath>
+        </javac>
+    </target>
+    
+    <target name="runJava" depends="runCompile">
+        <java classname="${run.class}" dir="." fork="true">
+            <arg value="-h"/>
+            <classpath>
+                <pathelement location="."/>
+                <pathelement path="${jpcore.jar}"/>
+                <pathelement path="${add.classpath}"/>
+            </classpath>
+        </java>
+    </target>
+</project>

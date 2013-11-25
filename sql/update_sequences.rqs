@@ -1,0 +1,40 @@
+<SQLRun>
+  <Connection>target.con</Connection>
+  <Statements>
+    <string>select setval(&apos;cs_all_attr_mapping_sequence&apos;, (select max(ID)+1 from cs_all_attr_mapping))</string>
+    <string>select setval(&apos;cs_attr_sequence&apos;, (select max(ID)+1 from cs_attr))</string>
+    <string>select setval(&apos;cs_cat_link_sequence&apos;, (select max(ID)+1 from cs_cat_link))</string>
+    <string>select setval(&apos;cs_cat_node_sequence&apos;, (select max(ID)+1 from cs_cat_node))</string>
+    <string>select setval(&apos;cs_class_attr_sequence&apos;, (select max(ID)+1 from cs_class_attr))</string>
+    <string>select setval(&apos;cs_icon_sequence&apos;, (select max(ID)+1 from cs_icon))</string>
+    <string>select setval(&apos;cs_java_class_sequence&apos;, (select max(ID)+1 from cs_java_class))</string>
+    <string>select setval(&apos;cs_locks_sequence&apos;, (select max(ID)+1 from cs_locks))</string>
+    <string>select setval(&apos;cs_method_sequence&apos;, (select max(ID)+1 from cs_method))</string>
+    <string>select setval(&apos;cs_method_class_assoc_sequence&apos;, (select max(ID)+1 from cs_method_class_assoc))</string>
+    <string>select setval(&apos;cs_permission_sequence&apos;, (select max(ID)+1 from cs_permission))</string>
+    <string>select setval(&apos;cs_policy_sequence&apos;, (select max(ID)+1 from cs_policy))</string>
+    <string>select setval(&apos;cs_policy_rule_sequence&apos;, (select max(ID)+1 from cs_policy_rule))</string>
+    <string>select setval(&apos;cs_query_sequence&apos;, (select max(ID)+1 from cs_query))</string>
+    <string>select setval(&apos;cs_query_class_assoc_sequence&apos;, (select max(ID)+1 from cs_query_class_assoc))</string>
+    <string>select setval(&apos;cs_query_link_sequence&apos;, (select max(ID)+1 from cs_query_link))</string>
+    <string>select setval(&apos;cs_query_parameter_sequence&apos;, (select max(ID)+1 from cs_query_parameter))</string>
+    <string>select setval(&apos;cs_query_store_sequence&apos;, (select max(ID)+1 from cs_query_store))</string>
+    <string>select setval(&apos;cs_query_store_ug_assoc_sequence&apos;, (select max(ID)+1 from cs_query_store_ug_assoc))</string>
+    <string>select setval(&apos;cs_query_ug_assoc_sequence&apos;, (select max(ID)+1 from cs_query_ug_assoc))</string>
+    <string>select setval(&apos;cs_type_sequence&apos;, (select max(ID)+1 from cs_type))</string>
+    <string>select setval(&apos;cs_ug_attr_perm_sequence&apos;, (select max(ID)+1 from cs_ug_attr_perm))</string>
+    <string>select setval(&apos;cs_ug_cat_node_perm_sequence&apos;, (select max(ID)+1 from cs_ug_cat_node_perm))</string>
+    <string>select setval(&apos;cs_ug_class_perm_sequence&apos;, (select max(ID)+1 from cs_ug_class_perm))</string>
+    <string>select setval(&apos;cs_ug_membership_sequence&apos;, (select max(ID)+1 from cs_ug_membership))</string>
+    <string>select setval(&apos;cs_ug_method_perm_sequence&apos;, (select max(ID)+1 from cs_ug_method_perm))</string>
+    <string>select setval(&apos;cs_class_sequence&apos;, (select max(ID)+1 from cs_class))</string>
+    <string>select setval(&apos;cs_domain_sequence&apos;, (select max(ID)+1 from cs_domain))</string>
+    <string>select setval(&apos;cs_config_attr_value_sequence&apos;, (select max(ID)+1 from cs_config_attr_value))</string>
+    <string>select setval(&apos;cs_config_attr_jt_sequence&apos;, (select max(ID)+1 from cs_config_attr_jt))</string>
+    <string>select setval(&apos;cs_config_attr_type_sequence&apos;, (select max(ID)+1 from cs_config_attr_type))</string>
+    <string>select setval(&apos;cs_usr_sequence&apos;, (select max(ID)+1 from cs_usr))</string>
+    <string>select setval(&apos;cs_config_attr_key_sequence&apos;, (select max(ID)+1 from cs_config_attr_key))</string>
+    <string>select setval(&apos;cs_config_attr_exempt_sequence&apos;, (select max(ID)+1 from cs_config_attr_exempt))</string>
+    <string>select setval(&apos;cs_ug_sequence&apos;, (select max(ID)+1 from cs_ug))</string>
+  </Statements>
+</SQLRun>

@@ -1,0 +1,17 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+cs_attr.field_name AS cs_attr_field_name, 
+cs_ug.name AS cs_ug_name, 
+cs_domain.name AS cs_domain_name, 
+cs_permission.key AS cs_permission_key 
+FROM cs_ug_attr_perm 
+LEFT JOIN cs_attr ON cs_attr.id = cs_ug_attr_perm.attr_id 
+LEFT JOIN cs_ug ON cs_ug.id = cs_ug_attr_perm.ug_id 
+LEFT JOIN cs_domain ON cs_domain.id = cs_ug_attr_perm.domain 
+LEFT JOIN cs_permission ON cs_permission.id = cs_ug_attr_perm.permission 
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

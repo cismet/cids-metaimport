@@ -1,0 +1,7 @@
+<SQLRun>
+  <Connection>source.con</Connection>
+  <Statements>
+    <string>ALTER TABLE cs_attr DROP COLUMN foreign_key_references_to_1n</string>
+    <string>ALTER TABLE cs_attr DROP COLUMN foreign_key_references_to_abs</string>
+  </Statements>
+</SQLRun>

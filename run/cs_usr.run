@@ -1,0 +1,37 @@
+<JPressoRun>
+  <SourceQuery>cs_usr.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_usr" targetField="login_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_usr_login_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="password" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_usr_password</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="last_pwd_change" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_usr_last_pwd_change</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="administrator" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_usr_administrator</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_usr" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References/>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_usr</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_usr" value="lookup(&quot;cs_usr&quot;,&quot;login_name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

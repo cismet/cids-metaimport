@@ -1,0 +1,67 @@
+<JPressoRun>
+  <SourceQuery>cs_cat_node.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_cat_node" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="descr" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_descr</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="node_type" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_node_type</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="is_root" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_is_root</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="org" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_org</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="dynamic_children" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_dynamic_children</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="sql_sort" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_sql_sort</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_node" targetField="icon" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_node_icon</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class" targetField="table_name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_class_table_name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_policy" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_policy" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_policy_name</Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_cat_node" referencingField="class_id" referencedTable="cs_class" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_cat_node" referencingField="policy" referencedTable="cs_policy" referencedField="id" comparing="false" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_cat_node</string>
+      <string>cs_class</string>
+      <string>cs_policy</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_policy" value="lookup(&quot;cs_policy&quot;,&quot;name&quot;) != null"/>
+      <property name="cs_class" value="lookup(&quot;cs_class&quot;,&quot;table_name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

@@ -1,0 +1,20 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT
+cs_cat_node.name AS cs_cat_node_name, 
+cs_cat_node.node_type AS cs_cat_node_node_type, 
+cs_cat_node.is_root AS cs_cat_node_is_root, 
+cs_ug.name AS cs_ug_name, 
+cs_domain.name AS cs_domain_name, 
+cs_permission.key AS cs_permission_key 
+FROM cs_ug_cat_node_perm 
+LEFT JOIN cs_ug ON cs_ug.id = cs_ug_cat_node_perm.ug_id 
+LEFT JOIN cs_domain ON cs_domain.id = cs_ug_cat_node_perm.domain 
+LEFT JOIN cs_permission ON cs_permission.id = cs_ug_cat_node_perm.permission 
+LEFT JOIN cs_cat_node ON cs_cat_node.id = cs_ug_cat_node_perm.cat_node_id 
+
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>
