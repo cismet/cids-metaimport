@@ -1,0 +1,29 @@
+<JPressoRun>
+  <SourceQuery>cs_dynamic_children_helper.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_dynamic_children_helper" targetField="name" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>name</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_dynamic_children_helper" targetField="code" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>code</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_dynamic_children_helper" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References/>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_dynamic_children_helper</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter/>
+  </Options>
+</JPressoRun>

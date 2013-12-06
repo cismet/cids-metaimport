@@ -1,0 +1,11 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+    name,
+    code
+FROM cs_dynamic_children_helper
+
+</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>

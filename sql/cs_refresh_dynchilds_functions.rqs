@@ -1,0 +1,6 @@
+<SQLRun>
+  <Connection>target.con</Connection>
+  <Statements>
+    <string>SELECT cs_refresh_dynchilds_functions()</string>
+  </Statements>
+</SQLRun>
