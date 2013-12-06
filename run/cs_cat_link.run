@@ -1,0 +1,58 @@
+<JPressoRun>
+  <SourceQuery>cs_cat_link.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_cat_link" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_cat_node" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_domain" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_domain_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_cat_node" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_from_name</Content>
+    </Mapping>
+    <Mapping path="1" targetTable="cs_cat_node" targetField="node_type" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_from_node_type</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_cat_node" targetField="name" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_to_name</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_cat_node" targetField="node_type" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>cs_cat_node_to_node_type</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_cat_link" targetField="org" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>cs_cat_link_org</Content>
+    </Mapping>
+    <Mapping path="2" targetTable="cs_cat_node" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+  </Mappings>
+  <References>
+    <Reference referencingTable="cs_cat_link" referencingField="domain_to" referencedTable="cs_domain" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_cat_link" referencingField="id_from" referencedTable="cs_cat_node[1]" referencedField="id" comparing="true" enclosingChar=""/>
+    <Reference referencingTable="cs_cat_link" referencingField="id_to" referencedTable="cs_cat_node[2]" referencedField="id" comparing="true" enclosingChar=""/>
+  </References>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_cat_link</string>
+      <string>cs_cat_node</string>
+      <string>cs_domain</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_domain" value="lookup(&quot;cs_domain&quot;,&quot;name&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>

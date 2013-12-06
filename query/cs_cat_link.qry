@@ -1,0 +1,16 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>SELECT 
+cs_cat_link.org AS cs_cat_link_org,
+cs_domain.name AS cs_domain_name,
+cs_cat_node_from.name AS cs_cat_node_from_name, 
+cs_cat_node_from.node_type AS cs_cat_node_from_node_type,
+cs_cat_node_to.name AS cs_cat_node_to_name, 
+cs_cat_node_to.node_type AS cs_cat_node_to_node_type
+FROM cs_cat_link
+LEFT JOIN cs_domain ON cs_cat_link.domain_to = cs_domain.id 
+LEFT JOIN cs_cat_node AS cs_cat_node_from ON cs_cat_link.id_from = cs_cat_node_from.id 
+LEFT JOIN cs_cat_node AS cs_cat_node_to ON cs_cat_link.id_to = cs_cat_node_to.id </Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>
