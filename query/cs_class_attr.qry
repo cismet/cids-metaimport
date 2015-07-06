@@ -1,0 +1,6 @@
+<SourceQuery>
+  <Connection>source.con</Connection>
+  <Statement>select cl.id, cl.name class_name, t.name type_name, attr_key, attr_value from cs_class_attr att join cs_class cl on (att.class_id = cl.id) join cs_type t on (att.type_id = t.id)</Statement>
+  <PreviewMaxRows>0</PreviewMaxRows>
+  <LabelCase>-</LabelCase>
+</SourceQuery>
