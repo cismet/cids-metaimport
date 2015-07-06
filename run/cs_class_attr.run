@@ -1,0 +1,37 @@
+<JPressoRun>
+  <SourceQuery>cs_class_attr.qry</SourceQuery>
+  <TargetConnection>target.con</TargetConnection>
+  <Mappings>
+    <Mapping path="" targetTable="cs_class_attr" targetField="id" autoIncrement="true" comparing="false" enclosingChar="">
+      <Content></Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class_attr" targetField="class_id" autoIncrement="false" comparing="true" enclosingChar="">
+      <Content>CodeHelper.getClassId(class_name)</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class_attr" targetField="type_id" autoIncrement="false" comparing="false" enclosingChar="">
+      <Content>CodeHelper.getType(type_name)</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class_attr" targetField="attr_key" autoIncrement="false" comparing="true" enclosingChar="&apos;">
+      <Content>attr_key</Content>
+    </Mapping>
+    <Mapping path="" targetTable="cs_class_attr" targetField="attr_value" autoIncrement="false" comparing="false" enclosingChar="&apos;">
+      <Content>attr_value</Content>
+    </Mapping>
+  </Mappings>
+  <References/>
+  <RuntimeProperties>
+    <FinalizerClass>StandardFinalizer</FinalizerClass>
+    <FinalizerProperties>
+      <property name="rollback" value="false"/>
+    </FinalizerProperties>
+  </RuntimeProperties>
+  <Options>
+    <Normalization>
+      <string>cs_class_attr</string>
+    </Normalization>
+    <DeleteOrphaned/>
+    <Filter>
+      <property name="cs_class_attr" value="lookup(&quot;cs_class_attr&quot;,&quot;attr_key&quot;) != null"/>
+    </Filter>
+  </Options>
+</JPressoRun>
